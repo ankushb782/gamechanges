@@ -53,7 +53,7 @@ class IssueListViewModel(private val postDao: PostDao, applicationContext: Conte
 
     }
     private fun loadPosts(){
-        deleteAllPosts()
+       // deleteAllPosts()
         subscription = Observable.fromCallable { postDao.all }
                 .concatMap {
 

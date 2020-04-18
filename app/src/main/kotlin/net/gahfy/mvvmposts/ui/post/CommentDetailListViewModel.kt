@@ -59,7 +59,7 @@ class CommentDetailListViewModel(private val postDao: PostDao):BaseViewModel(){
                     dbPostDetailList ->
                         if(dbPostDetailList.isEmpty())
                             postApi.getPostDetail(CommentsDetailActivity.id).concatMap {
-                                            apiPostDetailList -> postDao.insertDetailAll(*apiPostDetailList.toTypedArray())
+                                            apiPostDetailList ->
                                  Observable.just(apiPostDetailList)
                                        }
                         else
